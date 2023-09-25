@@ -266,9 +266,14 @@ suite("Themer Tests", function () {
     };
 
     fakeThemer.handleCommands(chatMessage).then(() => {
-      getConfigurationStub.calledOnce.should.be.true;
-      sendMessageStub.calledOnce.should.be.true;
-      sentMessage.should.equal(messageCurrent(installedTheme, installedThemeId));
+      try {
+        getConfigurationStub.calledOnce.should.be.true;
+        sendMessageStub.calledOnce.should.be.true;
+        sentMessage.should.equal(messageCurrent(installedTheme, installedThemeId));
+        done();
+      } catch (error) {
+        done(error);
+      }
     });
   })
 
