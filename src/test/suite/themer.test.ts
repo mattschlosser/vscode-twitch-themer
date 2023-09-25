@@ -248,8 +248,6 @@ suite("Themer Tests", function () {
   test(`Themer should return info about the built in theme`, function (done) {
     let sentMessage: string = "";
 
-    fakeState.update("workBen")
-
     const sendMessageStub = sinon
       .stub(fakeChatClient, "sendMessage")
       .callsFake(async (message: string) => {
