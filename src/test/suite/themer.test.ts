@@ -274,6 +274,8 @@ suite("Themer Tests", function () {
       } catch (error) {
         done(error);
       }
+    }).catch((error) => {
+      done(error);
     });
   })
 
