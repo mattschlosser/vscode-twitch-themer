@@ -255,7 +255,7 @@ suite("Themer Tests", function () {
       .callsFake(async (message: string) => {
         sentMessage = message;
       });
-    fakeTherm.onSendMessage(sendMessageStub);
+    fakeThemer.onSendMessage(sendMessageStub);
 
     fakeWorkspaceConfiguration.update("workbench.colorTheme", installedTheme);
 
