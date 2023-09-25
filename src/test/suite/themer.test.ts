@@ -300,7 +300,6 @@ suite("Themer Tests", function () {
     });
   });
 
-
   test("Themer should reset theme to original theme when requested", function (done) {
     fakeWorkspaceConfiguration.update("workbench.colorTheme", testTheme);
 
