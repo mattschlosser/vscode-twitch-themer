@@ -271,7 +271,7 @@ suite("Themer Tests", function () {
       getConfigurationStub.calledOnce.should.be.true;
       sendMessageStub.calledOnce.should.be.true;
       sentMessage.should.equal(messageCurrent(installedTheme, installedThemeId));
-    })
+    });
   })
 
   test(`Themer should return info about the GitHub repo`, function (done) {
